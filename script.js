@@ -2,6 +2,9 @@
 // 'func(" hello world", ['l', 'd'])' поверне нам "heo wor". 
 // Вихідний рядок та символи для видалення задає користувач.
 
+const str = prompt("Enter string:");
+const charsStr = prompt("Enter characters to remove:");
+const chars = charsStr.split('');
 
 function remove_chars(string, chars) {
     let result = '';
@@ -11,7 +14,9 @@ function remove_chars(string, chars) {
         }
         else { result += string[i] }
     }
-    return result
+    alert(result)
 }
-console.log(remove_chars('hello world', ['l', 'd']))
+
+
+remove_chars(str, chars)
 
