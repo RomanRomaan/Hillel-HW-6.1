@@ -3,8 +3,28 @@
 // Вихідний рядок та символи для видалення задає користувач.
 
 const str = prompt("Enter string:");
-const charsStr = prompt("Enter characters to remove:");
-const chars = charsStr.split('');
+if (str === null) {
+    alert("You`re canceled");
+}
+
+else if (!str.trim()) {
+    alert("Empty string");
+}
+else {
+    const charsStr = prompt("Enter characters to remove:");
+    if (charsStr === null) {
+        alert("You`re canceled");
+    }
+    else if (!charsStr.trim()) {
+        alert("Empty character");
+    }
+    else {
+        const chars = charsStr.split('');
+        remove_chars(str, chars)
+
+
+    }
+}
 
 function remove_chars(string, chars) {
     let result = '';
@@ -18,5 +38,5 @@ function remove_chars(string, chars) {
 }
 
 
-remove_chars(str, chars)
+
 
