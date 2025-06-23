@@ -13,5 +13,5 @@ function remove_chars(string, chars) {
     }
     return result
 }
-console.log(remove_chars('hello', 'h'))
+console.log(remove_chars('hello world', ['l', 'd']))
 
